@@ -117,4 +117,4 @@ cluster-config/
 ### Explanation
 
 #### Structure
-* The "cluster" directory is referenced by an Argo CD ApplicationSet.  Every sub-directory will be created as a separate Argo CD Application.
+* The "components" root directory is referenced by an Argo CD ApplicationSet.  Every sub-directory will be created as a separate Argo CD Application.
