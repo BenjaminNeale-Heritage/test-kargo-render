@@ -1,8 +1,14 @@
 configVersion: v1alpha1
 branchConfigs:
-- pattern: cluster/rosa-poc
+- pattern: cluster/([\w-]+)
   appConfigs:
     external-secrets-operator:
       configManagement:
-        path: clusters/overlays/rosa-poc/external-secrets-operator
-      outputPath: external-secrets-operator
+        kustomize:
+          path: clusters/overlays/${1}/external-secrets-operator
+      outputPath: components/external-secrets-operator
+    openshift-gitops-operator:
+      configManagement:
+        kustomize:
+          path: clusters/overlays/${1}/openshift-gitops-operator
+      outputPath: components/openshift-gitops-operator

@@ -10,7 +10,8 @@ jobs:
     strategy:
       matrix:
         targetBranch:
-        - cluster/rosa-poc
+        - cluster/poc-sandbox
+        - cluster/npe
     steps:
     - name: kargo-render-by-akuity
       uses: akuity/kargo-render-action@v0.1.0-rc.33

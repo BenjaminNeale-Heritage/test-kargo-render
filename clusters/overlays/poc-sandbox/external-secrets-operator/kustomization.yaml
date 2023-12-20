@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: external-secrets-operator
+
+resources:
+- ../../../../components/external-secrets-operator/base
+
+patches:
+- path: subscription-channel.yml
+  target:
+    kind: Subscription
