@@ -6,6 +6,8 @@ on:
 jobs:
   render-manifests:
     name: Render and Commit Manifests
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     strategy:
       matrix:
