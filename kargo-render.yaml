@@ -12,3 +12,8 @@ branchConfigs:
         kustomize:
           path: clusters/overlays/${1}/openshift-gitops-operator
       outputPath: components/openshift-gitops-operator
+    file-integrity-operator:
+      configManagement:
+        kustomize:
+          path: clusters/overlays/${1}/file-integrity-operator
+      outputPath: components/file-integrity-operator
