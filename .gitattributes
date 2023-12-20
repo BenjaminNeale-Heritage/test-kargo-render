@@ -1,0 +1,10 @@
+# Set the default behavior to override core.autocrlf configuration.
+* text=auto
+
+# Text files that should be normalised to have LF in the repository.
+*.json text
+*.md text
+*.properties text
+*.xml text
+*.yaml text
+*.yml text

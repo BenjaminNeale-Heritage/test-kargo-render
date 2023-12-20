@@ -1,0 +1,6 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: openshift-gitops-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "-20"

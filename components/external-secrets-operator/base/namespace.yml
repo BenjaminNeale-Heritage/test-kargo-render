@@ -1,0 +1,6 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: external-secrets-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "-20"

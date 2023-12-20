@@ -1,0 +1,19 @@
+name: Kargo Render
+on:
+  push:
+    branches:
+    - main
+jobs:
+  render-manifests:
+    name: Render and Commit Manifests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        targetBranch:
+        - cluster/rosa-poc
+    steps:
+    - name: kargo-render-by-akuity
+      uses: akuity/kargo-render-action@v0.1.0-rc.33
+      with:
+        personalAccessToken: ${{ secrets.GITHUB_TOKEN }}
+        targetBranch: ${{ matrix.targetBranch }}

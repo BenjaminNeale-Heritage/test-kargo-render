@@ -1,0 +1,8 @@
+configVersion: v1alpha1
+branchConfigs:
+- pattern: cluster/rosa-poc
+  appConfigs:
+    external-secrets-operator:
+      configManagement:
+        path: clusters/overlays/rosa-poc/external-secrets-operator
+      outputPath: external-secrets-operator
