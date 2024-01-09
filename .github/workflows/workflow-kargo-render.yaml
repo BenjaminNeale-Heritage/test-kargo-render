@@ -16,7 +16,7 @@ jobs:
         - cluster/npe
     steps:
     - name: kargo-render-by-akuity
-      uses: akuity/kargo-render-action@v0.1.0-rc.33
+      uses: akuity/kargo-render-action@v0.1.0-rc.34
       with:
         personalAccessToken: ${{ secrets.GITHUB_TOKEN }}
         targetBranch: ${{ matrix.targetBranch }}
