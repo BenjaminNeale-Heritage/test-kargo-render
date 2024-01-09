@@ -12,8 +12,11 @@ jobs:
     strategy:
       matrix:
         targetBranch:
-        - cluster/poc-sandbox
-        - cluster/npe
+        - cluster/poc-sandbox/components/external-secrets-operator
+        - cluster/poc-sandbox/components/file-integrity-operator
+        - cluster/poc-sandbox/components/openshift-gitops-operator
+        - cluster/npe/components/external-secrets-operator
+        - cluster/npe/components/openshift-gitops-operator
     steps:
     - name: kargo-render-by-akuity
       uses: akuity/kargo-render-action@v0.1.0-rc.34

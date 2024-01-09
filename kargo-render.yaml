@@ -1,6 +1,6 @@
 configVersion: v1alpha1
 branchConfigs:
-- pattern: cluster/([\w-]+)
+- pattern: cluster/([\w-]+)/components/([\w-]+)
   appConfigs:
     component:
       configManagement:
