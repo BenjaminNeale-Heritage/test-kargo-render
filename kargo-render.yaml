@@ -1,8 +1,26 @@
 configVersion: v1alpha1
 branchConfigs:
-- pattern: cluster/([\w-]+)/components/([\w-]+)
+- name: cluster/poc-sandbox
   appConfigs:
-    component:
+    external-secrets-operator:
       configManagement:
-        path: clusters/overlays/${1}/${2}
-      outputPath: components/${2}
+        path: clusters/overlays/poc-sandbox/external-secrets-operator
+      outputPath: components/external-secrets-operator
+    openshift-gitops-operator:
+      configManagement:
+        path: clusters/overlays/poc-sandbox/openshift-gitops-operator
+      outputPath: components/openshift-gitops-operator
+    file-integrity-operator:
+      configManagement:
+        path: clusters/overlays/poc-sandbox/file-integrity-operator
+      outputPath: components/file-integrity-operator
+- name: cluster/npe
+  appConfigs:
+    external-secrets-operator:
+      configManagement:
+        path: clusters/overlays/poc-sandbox/external-secrets-operator
+      outputPath: components/external-secrets-operator
+    openshift-gitops-operator:
+      configManagement:
+        path: clusters/overlays/poc-sandbox/openshift-gitops-operator
+      outputPath: components/openshift-gitops-operator
